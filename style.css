@@ -8,10 +8,10 @@ body {
 }
 
 .calculator {
-    min-height: 100vh;     /*height will be the entire viewport height*/
+    min-height: 100vh;          /*height will be the entire viewport height*/
     display: grid;
     justify-content: center;
-    align-content: center;      /*should be content, not items, otherwise the buttons show up with gaps b/w them*/
+    align-content: center;      /*has to be content, not items, otherwise the buttons show up with gaps b/w them*/
     grid-template-columns: repeat(4,100px);
     grid-template-rows: repeat(6,100px);
 }
@@ -35,10 +35,11 @@ body {
 }
 
  .display {
-     padding: 0px 12px 16px;
+     padding: 12px;
      font-size: 32px;
      display: flex;
-     justify-content: flex-end;
+     justify-content: space-between;
+     flex-direction: column;
      align-items: flex-end;
      grid-column: 1/-1;         /*moves the display screen to the top of the calculator*/
      background-color: black;
@@ -48,4 +49,10 @@ body {
 
  .two {
      grid-column: span 2;
+ }
+
+ .display .fdisplay {
+     color: white;
+     opacity: 0.8;
+     font-size: 24px;
  }
